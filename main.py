@@ -1,12 +1,12 @@
 import cv2
 import numpy as np
-from detectorVehiculo import DetectorVehiculos
+from detectorObjetivo import DetectorObjetivo
 from time import sleep
 from config import *
 
 cap = cv2.VideoCapture(ruta_video)
 deteccion = cv2.createBackgroundSubtractorMOG2(history=10000, varThreshold=100)
-dV = DetectorVehiculos()
+dV = DetectorObjetivo()
 
 while True:
     ret, frame = cap.read()

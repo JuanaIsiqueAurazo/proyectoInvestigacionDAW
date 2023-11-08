@@ -1,7 +1,7 @@
 import cv2
 from config import *
 
-class DetectorVehiculos:
+class DetectorObjetivo:
     def __init__(self):
         self.ancho_minimo = ancho_minimo
         self.alto_minimo = alto_minimo
@@ -24,7 +24,7 @@ class DetectorVehiculos:
                 cv2.line(frame, (25, self.posicion_linea), (1200, self.posicion_linea), (0, 127, 255), 3)
                 #cv2.line(frame, (0, self.posicion_linea), (1280, self.posicion_linea), (0, 127, 255), 3)
                 self.detecciones.remove((x, y))
-                print("Carros detectados hasta el momento: " + str(self.carros))
+                print("Objetivos detectados hasta el momento: " + str(self.carros))
 
     def mostrar_informacion(self, zona, frame, mascara):
         cv2.imshow("Máscara", mascara)
